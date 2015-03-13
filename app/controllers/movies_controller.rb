@@ -6,7 +6,12 @@ class MoviesController < ApplicationController
     title = params[:sort_by]
     title_header = params[:id]
     @movies = Movie.find(:all,:order=>title)
-    @highlight = "hilite"
+    @highlight = "hilite" 
+    @all_ratings = ["G","R","PG-13"] 
+    ratings = params[:ratings] 
+    #ratings = ratings.keys    
+    #@movies = Movie.find_by_rating(:all,:conditions=>ratings)
+    #@movies = Movie.find_by_rating(ratings)  
   end
 
   def show
