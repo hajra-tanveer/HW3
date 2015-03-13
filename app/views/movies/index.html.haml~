@@ -4,7 +4,7 @@
 %table#movies
   %thead
     %tr
-      %th Movie Title
+      %th Movie Title 
       %th Rating
       %th Release Date
       %th More Info
@@ -16,6 +16,6 @@
         %td= movie.release_date
         %td= link_to "More about #{movie.title}", movie_path(movie)
 
-= link_to 'Add new movie', new_movie_path
+%hilite{:class=>@highlight}= link_to 'Add new movie', new_movie_path
 = link_to 'sort by title', movies_path(:sort_by=>"title")
 = link_to 'release_date_header', movies_path(:id=>"title_header")

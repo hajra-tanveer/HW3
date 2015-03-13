@@ -6,6 +6,7 @@ class MoviesController < ApplicationController
     title = params[:sort_by]
     title_header = params[:id]
     @movies = Movie.find(:all,:order=>title)
+    highlight = "hilite"
   end
 
   def show
