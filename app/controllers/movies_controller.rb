@@ -8,11 +8,13 @@ class MoviesController < ApplicationController
     @movies = Movie.find(:all,:order=>title)
     @highlight = "hilite" 
     @all_ratings = ["G","R","PG-13"] 
-    ratings = params[:ratings]
-    ratings = ratings.keys    
-    #@movies = Movie.find_by_rating(:all,:conditions=>ratings)
-    @movies = Movie.find_all_by_rating(ratings)  
-  end
+    @ratings = params[:ratings]
+    if !params[:ratings].nil?
+     @ratings = @ratings.keys    
+     #@movies = Movie.find_by_rating(:all,:conditions=>ratings)
+     @movies = Movie.find_all_by_rating(@ratings)  
+    end
+end
 
   def show
     id = params[:id] # retrieve movie ID from URI route

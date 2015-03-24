@@ -41,7 +41,7 @@ hilite {
   background-color: orange;
   color: white;
   border-bottom: 4px solid purple;
-  font-size: 2em;
+  font-size: 1em;
   font-style: normal;
 }
 table#movies {

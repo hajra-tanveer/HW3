@@ -22,6 +22,8 @@
 %hilite{:class=>@highlight}= link_to 'release_date_header', movies_path(:id=>"title_header")
 
 
+%h1
+
 = form_tag movies_path, :method => :get do
   Include: 
   - @all_ratings.each do |rating|
